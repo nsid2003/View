@@ -9,13 +9,19 @@
         <form>
 
         </form>
-          <label> Nom </label> <input type="text" v-model="nom">
+          <label> Unité à convertir </label> <input type="text" v-model="valeurdepart">
+          <select v-model="unitedepart">
+            <option value="Metre">Metre</option>
+          </select>
           <br/>
           <br/>
-          <label> prenom </label> <input type="text" v-model="prenom ">
+          <label> Resultat </label> <input type="text" v-model="resultat">
+          <select v-model="unitearrive">
+            <option value="Centimetre">Centimetre</option>
+          </select>
           <br/>
           <br/>
-          <button @click="ajouter">Faire la phrase</button>
+          <button @click="convertir"> Convertir </button>
           <br/>
           <br/>
         {{ phrase }}
@@ -32,17 +38,26 @@
     data(){
       return {
         msg : "bonjour",
-        nom : "",
-        prenom :"",
-        phrase :""
+        valeurdepart:0,
+        phrase :"",
+        resultat:0,
+        unitedepart:"",
+        unitearrive:"",
 
         
       }
     },
     methods:{
       ajouter(){
-        this.phrase = "je m'appelle" + this.nom + this.prenom;
+        this.phrase = "je m'appelle " + this.nom + this.prenom;
+      },
+      convertir(){
+      if(this.unitedepart== "Metre" && this.unitearrive =="Centimetre") 
+      {
+        this.resultat = this.valeurdepart * 100;
       }
+    }
+    
     }
   }
 </script>
