@@ -1,7 +1,13 @@
 <template>
     <div class="about">
-      <h1>Yes nsid</h1>
+      <h1>Yes nsid jjjjjjjjjjjjjj</h1>
+      <label> Nom </label> <input type="text">
+      <br/>
+      <label> Nom </label> <input type="text">
     </div>
+    
+      
+    
   </template>
 
   <style>
