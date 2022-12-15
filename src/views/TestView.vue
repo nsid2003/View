@@ -60,13 +60,25 @@
       convertir(){
       if(this.unitedepart== "XAF" && this.unitearrive =="EUR") 
       {
-        this.resultat = this.valeurdepart * 650;
+        this.resultat = this.valeurdepart / 650;
       }
       if(this.unitedepart== "XAF" && this.unitearrive =="USD") 
       {
-        this.resultat = this.valeurdepart * 630;
+        this.resultat = this.valeurdepart / 630;
       }
       if(this.unitedepart== "XAF" && this.unitearrive =="GBP") 
+      {
+        this.resultat = this.valeurdepart / 1000;
+      }
+      if(this.unitedepart== "EUR" && this.unitearrive =="XAF") 
+      {
+        this.resultat = this.valeurdepart * 650;
+      }
+      if(this.unitedepart== "USD" && this.unitearrive =="XAF") 
+      {
+        this.resultat = this.valeurdepart * 630;
+      }
+      if(this.unitedepart== "BGP" && this.unitearrive =="XAF") 
       {
         this.resultat = this.valeurdepart * 1000;
       }
